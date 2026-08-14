@@ -33,6 +33,15 @@ public class PracticeFormPage extends BasePage{
     WebElement inputSubjects;
     @FindBy(id = "currentAddress")
     WebElement textareaCurAdd;
+    @FindBy(id ="react-select-3-input" )
+    WebElement inputState;
+    @FindBy(id ="react-select-4-input" )
+    WebElement inputCity;
+    @FindBy(id ="submit")
+    WebElement btnSubmit;
+    @FindBy(id = "example-modal-sizes-title-lg")
+    WebElement modalMessage;
+
 
     public void typePracticeForm(Student student){
         inputFirstName.sendKeys(student.getFirstName());
@@ -45,7 +54,24 @@ public class PracticeFormPage extends BasePage{
         typeDateOfBirth(student.getDateOfBirth());
         typeSubjects(student.getSubjects());
         typeHobbies(student.getHobbies());
+        scrollActions();
         textareaCurAdd.sendKeys(student.getAddress());
+        typeStateCity(student.getState(), student.getCity());
+        btnSubmit.click();
+
+
+    }
+
+    public boolean validateModalMessage(String text){
+        return isTextInElementPresent(modalMessage, text);
+    }
+
+    private void typeStateCity(String state, String city){
+        inputState.sendKeys(state);
+        inputState.sendKeys(Keys.ENTER);
+
+        inputCity.sendKeys(city);
+        inputCity.sendKeys(Keys.ENTER);
 
     }
 
