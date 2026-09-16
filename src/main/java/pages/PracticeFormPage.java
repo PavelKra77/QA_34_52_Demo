@@ -58,6 +58,7 @@ public class PracticeFormPage extends BasePage{
         textareaCurAdd.sendKeys(student.getAddress());
         typeStateCity(student.getState(), student.getCity());
         btnSubmit.click();
+        //new Actions(driver).moveToElement(dateInput).click().perform();
 
 
     }

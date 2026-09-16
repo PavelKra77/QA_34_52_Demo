@@ -17,8 +17,8 @@ public class AppManager {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         driver = new ChromeDriver(chromeOptions);
-        driver.manage().window().maximize();
-
+    //    driver.manage().window().maximize();
+        driver.manage().window().setSize(new org.openqa.selenium.Dimension(1200, 800));
     }
 
     @AfterMethod(alwaysRun = true)
