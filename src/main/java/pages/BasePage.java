@@ -37,3 +37,12 @@ public class BasePage {
         return element.getText().contains(text);
     }
 }
+
+//$env:GRADLE_USER_HOME="C:\gradle_home"
+//./gradlew --version
+//./gradlew clean smoke --no-daemon
+//[Environment]::SetEnvironmentVariable(
+//    "GRADLE_USER_HOME",
+//    "C:\gradle_home",
+//    "User"
+//)
