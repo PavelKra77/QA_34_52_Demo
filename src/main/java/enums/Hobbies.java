@@ -1,7 +1,7 @@
 package enums;
 
 public enum Hobbies {
-    SPORTS("//*[@for='hobbies-checkbox-1']"),
+    SPORTS("hobbies-checkbox-1"),
     READING("hobbies-checkbox-2"),
     MUSIC("hobbies-checkbox-3");
 
